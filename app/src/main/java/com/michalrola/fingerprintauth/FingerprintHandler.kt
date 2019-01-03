@@ -6,7 +6,9 @@ import android.content.pm.PackageManager
 import android.hardware.fingerprint.FingerprintManager
 import android.os.CancellationSignal
 import android.support.v4.app.ActivityCompat
+import android.util.Log
 import android.widget.Toast
+import javax.crypto.Cipher
 
 class FingerprintHandler(context: Context): FingerprintManager.AuthenticationCallback() {
 
@@ -24,6 +26,10 @@ class FingerprintHandler(context: Context): FingerprintManager.AuthenticationCal
             return
         }
         fingerprintManager.authenticate(cryptoObject, cancellationSignal, 0, this, null)
+
+        Toast.makeText(context,
+            "authentificate in startAuth",
+            Toast.LENGTH_LONG).show()
     }
 
     override fun onAuthenticationError(errorCode: Int, errString: CharSequence?) {
@@ -34,19 +40,19 @@ class FingerprintHandler(context: Context): FingerprintManager.AuthenticationCal
 
     override fun onAuthenticationSucceeded(result: FingerprintManager.AuthenticationResult?) {
         Toast.makeText(context,
-            "Authentication succeeded.",
+            "Authentication succeeded. ",
             Toast.LENGTH_LONG).show()
     }
 
     override fun onAuthenticationHelp(helpCode: Int, helpString: CharSequence?) {
         Toast.makeText(context,
             "Authentication help\n" + helpString,
-            Toast.LENGTH_LONG).show();
+            Toast.LENGTH_LONG).show()
     }
 
     override fun onAuthenticationFailed() {
         Toast.makeText(context,
             "Authentication failed.",
-            Toast.LENGTH_LONG).show();
+            Toast.LENGTH_LONG).show()
     }
 }
