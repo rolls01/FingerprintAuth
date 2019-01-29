@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">FingerprintAuth</string>
+    <string name="fingerpint_not_entabled_message">Lock screen security not enabled in Settings</string>
+    <string name="fingerpint_permissions_not_entabled_message">Fingerprint authentication permission not enabled
+    </string>
+    <string name="fingerpint_not_registered_message">Register at least one fingerprint in Settings</string>
+    <string name="auth_error_message">Authentication error</string>
+    <string name="aith_success_message">Authentication succeeded.</string>
+    <string name="auth_help_message">Authentication help</string>
+    <string name="auth_failed_message">Authentication failed.</string>
 </resources>

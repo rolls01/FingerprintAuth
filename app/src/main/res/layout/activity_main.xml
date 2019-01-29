@@ -7,32 +7,25 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <!--<ImageView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:background="@drawable/android_studio_2_fingerprint_icon"-->
-    <!--app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"-->
-    <!--app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"-->
-    <!--android:id="@+id/imageView4" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>-->
-
-    <TextView
+    <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Encrypted..."
-            android:id="@+id/encryptedTextView"
-            android:textSize="22dp"
-            app:layout_constraintTop_toBottomOf="@+id/encryptButton"
+            android:inputType="textPersonName"
+            android:text="1234"
+            android:ems="10"
+            android:id="@+id/pinEditText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="8dp"
-            android:maxLength="50"/>
+            app:layout_constraintTop_toTopOf="parent"
+    />
 
     <Button
             android:text="Listener"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/listenerButtonEnc"
-            app:layout_constraintTop_toBottomOf="@+id/PINexitText"
+            app:layout_constraintTop_toBottomOf="@+id/pinEditText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="8dp"/>
@@ -45,6 +38,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="8dp"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Encrypted..."
+            android:id="@+id/encryptedTextView"
+            android:textSize="22dp"
+            app:layout_constraintTop_toBottomOf="@+id/encryptButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:maxLength="50"/>
     <TextView
             android:text="Decrypted..."
             android:layout_width="wrap_content"
@@ -74,15 +79,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="8dp"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="1234"
-            android:ems="10"
-            android:id="@+id/PINexitText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/imageView4"/>
 
 </android.support.constraint.ConstraintLayout>
